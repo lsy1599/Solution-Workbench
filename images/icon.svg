@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="vs-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7B2FBE;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4B0082;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="doc-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8e0f0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect x="4" y="4" width="120" height="120" rx="18" ry="18" fill="url(#vs-grad)" />
+  <!-- Inner glow -->
+  <rect x="8" y="8" width="112" height="112" rx="14" ry="14" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+  <!-- Solution document icon -->
+  <g transform="translate(24, 16)">
+    <!-- Main document -->
+    <path d="M8,0 L52,0 L68,16 L68,80 C68,82 66,84 64,84 L4,84 C2,84 0,82 0,80 L0,4 C0,2 2,0 4,0 Z" fill="url(#doc-grad)" />
+    <!-- Folded corner -->
+    <path d="M52,0 L52,12 C52,14 54,16 56,16 L68,16 Z" fill="#d4c4e8" />
+    <!-- VS logo lines on document -->
+    <rect x="10" y="28" width="48" height="4" rx="2" fill="#7B2FBE" opacity="0.7" />
+    <rect x="10" y="38" width="36" height="4" rx="2" fill="#7B2FBE" opacity="0.5" />
+    <rect x="10" y="48" width="42" height="4" rx="2" fill="#7B2FBE" opacity="0.5" />
+    <rect x="10" y="58" width="30" height="4" rx="2" fill="#7B2FBE" opacity="0.4" />
+    <rect x="10" y="68" width="38" height="4" rx="2" fill="#7B2FBE" opacity="0.3" />
+  </g>
+  <!-- .sln badge -->
+  <g transform="translate(52, 72)">
+    <rect x="0" y="0" width="52" height="28" rx="6" fill="#FF6B00" />
+    <text x="26" y="19" font-family="Consolas,monospace" font-size="13" font-weight="700" fill="white" text-anchor="middle">.sln</text>
+  </g>
+  <!-- Small tree-structure hint -->
+  <g transform="translate(28, 22)" opacity="0.9">
+    <circle cx="4" cy="4" r="3" fill="#FFD700" />
+  </g>
+</svg>
