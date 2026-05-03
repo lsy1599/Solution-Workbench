@@ -17,6 +17,7 @@ export class StandardProjectTreeItem extends ProjectTreeItem {
         const configType = await getConfigurationType(this.path);
         if (configType === "Application") {
             this.contextValue = ContextValues.project + '-standard-exe';
+            this.createId();
         }
     }
 

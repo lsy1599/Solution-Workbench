@@ -12,9 +12,7 @@ export abstract class TerminalAction implements Action {
             return Promise.resolve();
         }
 
-        const isBuildAction = this.args.some(a =>
-            a.includes("/t:Build") || a.includes("/t:Rebuild") || a.includes("/t:Clean")
-        );
+        const isBuildAction = this.args.some(a => /\/t:/i.test(a));
 
         if (isBuildAction) {
             buildRunner.executeBuild(this.args, this.workingFolder);

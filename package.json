@@ -2,7 +2,7 @@
   "name": "vscode-solution",
   "displayName": "Solution Workbench",
   "description": "%extension.description%",
-  "version": "1.0.40",
+  "version": "1.0.42",
   "license": "MIT",
   "publisher": "Simon",
   "icon": "images/icon.png",
@@ -677,7 +677,12 @@
         },
         {
           "command": "solutionExplorer.inlineBuild",
-          "when": "view in solutionexplorer.viewTypes && viewItem =~ /^project-standard(-exe)?$/ && !solutionExplorer.buildInProgress && !solutionExplorer.runOrDebugInProgress",
+          "when": "view in solutionexplorer.viewTypes && viewItem == project-standard && !solutionExplorer.buildInProgress && !solutionExplorer.runOrDebugInProgress",
+          "group": "inline@90"
+        },
+        {
+          "command": "solutionExplorer.inlineBuild",
+          "when": "view in solutionexplorer.viewTypes && viewItem == project-standard-exe && !solutionExplorer.buildInProgress && !solutionExplorer.runOrDebugInProgress",
           "group": "inline@90"
         },
         {
@@ -687,7 +692,12 @@
         },
         {
           "command": "solutionExplorer.inlineRebuild",
-          "when": "view in solutionexplorer.viewTypes && viewItem =~ /^project-standard(-exe)?$/ && !solutionExplorer.buildInProgress && !solutionExplorer.runOrDebugInProgress",
+          "when": "view in solutionexplorer.viewTypes && viewItem == project-standard && !solutionExplorer.buildInProgress && !solutionExplorer.runOrDebugInProgress",
+          "group": "inline@91"
+        },
+        {
+          "command": "solutionExplorer.inlineRebuild",
+          "when": "view in solutionexplorer.viewTypes && viewItem == project-standard-exe && !solutionExplorer.buildInProgress && !solutionExplorer.runOrDebugInProgress",
           "group": "inline@91"
         },
         {
@@ -702,7 +712,12 @@
         },
         {
           "command": "solutionExplorer.cancelBuild",
-          "when": "view in solutionexplorer.viewTypes && viewItem =~ /^project-standard(-exe)?-building$/",
+          "when": "view in solutionexplorer.viewTypes && viewItem == project-standard-building",
+          "group": "inline@90"
+        },
+        {
+          "command": "solutionExplorer.cancelBuild",
+          "when": "view in solutionexplorer.viewTypes && viewItem == project-standard-exe-building",
           "group": "inline@90"
         },
         {
@@ -717,7 +732,12 @@
         },
         {
           "command": "solutionExplorer.stopRun",
-          "when": "view in solutionexplorer.viewTypes && viewItem =~ /^project-standard(-exe)?-running$/",
+          "when": "view in solutionexplorer.viewTypes && viewItem == project-standard-running",
+          "group": "inline@88"
+        },
+        {
+          "command": "solutionExplorer.stopRun",
+          "when": "view in solutionexplorer.viewTypes && viewItem == project-standard-exe-running",
           "group": "inline@88"
         },
         {
